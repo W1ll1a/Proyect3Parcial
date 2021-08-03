@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ClinicaActivity">
+
+    <Button
+        android:id="@+id/btnGuardarClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="Guardar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnEliminarClinica"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnEliminarClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="85dp"
+        android:layout_marginTop="56dp"
+        android:text="Eliminar"
+        app:layout_constraintStart_toStartOf="@+id/btnGuardarClinica"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnActualizarClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:text="Actualizar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnEliminarClinica"
+        app:layout_constraintStart_toEndOf="@+id/btnEliminarClinica" />
+
+    <Button
+        android:id="@+id/btnBuscarClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Buscar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnActualizarClinica"
+        app:layout_constraintStart_toEndOf="@+id/btnActualizarClinica" />
+
+    <TextView
+        android:id="@+id/txvCodigoClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="204dp"
+        android:text="Codigo Clinica"
+        app:layout_constraintEnd_toEndOf="@+id/txvNombreClinica"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txvNombreClinica"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvNombreClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Nombre Clinica"
+        app:layout_constraintBottom_toBottomOf="@+id/txtNombreClinica"
+        app:layout_constraintEnd_toStartOf="@+id/txtNombreClinica"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvCodigoClinica"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/txtCodigoClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="47dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txvCodigoClinica"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNombreClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="8dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCodigoClinica"
+        app:layout_constraintTop_toBottomOf="@+id/txtCodigoClinica" />
+
+    <EditText
+        android:id="@+id/txtEmpleadoEncargado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="@+id/txtTelefonoClinica"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtTelefonoClinica"
+        app:layout_constraintTop_toBottomOf="@+id/txtTelefonoClinica" />
+
+    <EditText
+        android:id="@+id/txtTelefonoClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="28dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toEndOf="@+id/txvTelefonoClinica"
+        app:layout_constraintTop_toBottomOf="@+id/txtNombreClinica" />
+
+    <TextView
+        android:id="@+id/txvTelefonoClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:text="Telefono"
+        app:layout_constraintBottom_toBottomOf="@+id/txtTelefonoClinica"
+        app:layout_constraintEnd_toEndOf="@+id/txvEmpleadoEncargado"
+        app:layout_constraintHorizontal_bias="0.525"
+        app:layout_constraintStart_toStartOf="@+id/txvEmpleadoEncargado" />
+
+    <TextView
+        android:id="@+id/txvEmpleadoEncargado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="4dp"
+        android:text="Empleado Encargado"
+        app:layout_constraintBottom_toBottomOf="@+id/txtEmpleadoEncargado"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

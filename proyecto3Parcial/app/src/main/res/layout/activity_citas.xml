@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CitasActivity">
+
+    <TextView
+        android:id="@+id/txvFechaCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="46dp"
+        android:layout_marginEnd="46dp"
+        android:layout_marginBottom="47dp"
+        android:text="Fecha"
+        app:layout_constraintBottom_toTopOf="@+id/txvHora"
+        app:layout_constraintEnd_toStartOf="@+id/btnActualizarCita"
+        app:layout_constraintStart_toStartOf="@+id/btnAgregarCita" />
+
+    <EditText
+        android:id="@+id/txtFechaCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="251dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintEnd_toEndOf="@+id/spEstadoCita"
+        app:layout_constraintStart_toStartOf="@+id/spEstadoCita"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvPacienteCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="50dp"
+        android:text="Paciente"
+        app:layout_constraintEnd_toStartOf="@+id/txtHoraCita"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/spClienteCita" />
+
+    <Spinner
+        android:id="@+id/spClienteCita"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginStart="47dp"
+        android:layout_marginTop="33dp"
+        android:layout_marginEnd="48dp"
+        android:layout_marginBottom="32dp"
+        app:layout_constraintBottom_toTopOf="@+id/txvEmpleadoCita"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvPacienteCita"
+        app:layout_constraintTop_toBottomOf="@+id/txtHoraCita" />
+
+    <TextView
+        android:id="@+id/txvEmpleadoCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:text="Empleado"
+        app:layout_constraintEnd_toEndOf="@+id/txvPacienteCita"
+        app:layout_constraintStart_toStartOf="@+id/txvClinica"
+        app:layout_constraintTop_toTopOf="@+id/spEmpleadoCita" />
+
+    <Spinner
+        android:id="@+id/spEmpleadoCita"
+        android:layout_width="214dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="129dp"
+        android:layout_marginBottom="129dp"
+        app:layout_constraintBottom_toBottomOf="@+id/txvFechaRegistroCita"
+        app:layout_constraintStart_toStartOf="@+id/spClienteCita"
+        app:layout_constraintTop_toTopOf="@+id/txvHora" />
+
+    <Button
+        android:id="@+id/btnAgregarCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="16dp"
+        android:text="Agregar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+
+    <Button
+        android:id="@+id/btnActualizarCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Actualizar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEliminarCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.947"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvCodigoCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="26dp"
+        android:layout_marginBottom="31dp"
+        android:text="Codigo"
+        app:layout_constraintBottom_toTopOf="@+id/spEstadoCita"
+        app:layout_constraintEnd_toEndOf="@+id/txvFechaCita"
+        app:layout_constraintStart_toStartOf="@+id/txvEstadoCita"
+        app:layout_constraintTop_toTopOf="@+id/txtCodigoCita" />
+
+    <EditText
+        android:id="@+id/txtCodigoCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="29dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintStart_toStartOf="@+id/btnActualizarCita"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizarCita" />
+
+    <TextView
+        android:id="@+id/txvEstadoCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="51dp"
+        android:layout_marginTop="49dp"
+        android:text="Estado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvCodigoCita" />
+
+    <Spinner
+        android:id="@+id/spEstadoCita"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="105dp"
+        android:layout_marginBottom="104dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtHoraCita"
+        app:layout_constraintEnd_toEndOf="@+id/txtCodigoCita"
+        app:layout_constraintStart_toStartOf="@+id/txtCodigoCita"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizarCita" />
+
+    <TextView
+        android:id="@+id/txvHora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hora"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtHoraCita"
+        app:layout_constraintEnd_toEndOf="@+id/txvFechaCita" />
+
+    <EditText
+        android:id="@+id/txtHoraCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="22dp"
+        android:ems="10"
+        android:inputType="time"
+        app:layout_constraintStart_toStartOf="@+id/txtFechaCita"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaCita" />
+
+    <TextView
+        android:id="@+id/txvClinica"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="42dp"
+        android:layout_marginBottom="51dp"
+        android:text="Clinica"
+        app:layout_constraintBottom_toTopOf="@+id/txvFechaRegistroCita"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Spinner
+        android:id="@+id/spClinicaCita"
+        android:layout_width="0dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="25dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaRegistroCita"
+        app:layout_constraintEnd_toEndOf="@+id/txtFechaRegistroCita"
+        app:layout_constraintStart_toStartOf="@+id/spClienteCita"
+        app:layout_constraintTop_toBottomOf="@+id/spEmpleadoCita" />
+
+    <TextView
+        android:id="@+id/txvFechaRegistroCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="33dp"
+        android:text="Fecha de registro"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtFechaRegistroCita"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtFechaRegistroCita"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="13dp"
+        android:layout_marginBottom="85dp"
+        android:ems="10"
+        android:inputType="date"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvFechaRegistroCita" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

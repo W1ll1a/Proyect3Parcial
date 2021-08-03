@@ -1,0 +1,240 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EmpleadosActivity">
+
+    <Button
+        android:id="@+id/btnAgregarEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="20dp"
+        android:text="Agregar"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnActualizarEmpleado"
+        android:layout_width="138dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:text="Actualizar"
+        android:textSize="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnEliminarEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="16dp"
+        android:text="Eliminar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txvNombreEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:text="Nombre"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtNombre"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtNombre"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txtApellidoEmpleado"
+        app:layout_constraintStart_toStartOf="@+id/txtApellidoEmpleado" />
+
+    <TextView
+        android:id="@+id/txvIdEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="62dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginEnd="62dp"
+        android:text="id"
+        app:layout_constraintEnd_toEndOf="@+id/txvFechaNacimientoEmpleado"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnAgregarEmpleado" />
+
+    <EditText
+        android:id="@+id/txtIdEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:layout_marginEnd="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintEnd_toEndOf="@+id/btnEliminarEmpleado"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizarEmpleado" />
+
+    <TextView
+        android:id="@+id/txvApellidoEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="46dp"
+        android:text="Apellido"
+        app:layout_constraintBottom_toTopOf="@+id/txvIdentificacionEmpleado"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtApellidoEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="4dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txtIdentificacionEmpleado"
+        app:layout_constraintEnd_toEndOf="@+id/txtIdentificacionEmpleado" />
+
+    <TextView
+        android:id="@+id/txvIdentificacionEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="41dp"
+        android:layout_marginBottom="26dp"
+        android:text="Identificacion"
+        app:layout_constraintBottom_toTopOf="@+id/txtPuestoEmpleado"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtIdentificacionEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="1dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txvIdentificacionEmpleado"
+        app:layout_constraintEnd_toEndOf="@+id/txtPuestoEmpleado"
+        app:layout_constraintTop_toTopOf="@+id/txvIdentificacionEmpleado" />
+
+    <TextView
+        android:id="@+id/txvPuestoEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="27dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="36dp"
+        android:text="Puesto"
+        app:layout_constraintBottom_toTopOf="@+id/txvFechaNacimientoEmpleado"
+        app:layout_constraintEnd_toEndOf="@+id/txvIdentificacionEmpleado"
+        app:layout_constraintStart_toStartOf="@+id/txvFechaNacimientoEmpleado" />
+
+    <EditText
+        android:id="@+id/txtPuestoEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:layout_marginBottom="19dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaNacimientoEmpleado"
+        app:layout_constraintEnd_toEndOf="@+id/txtFechaNacimientoEmpleado" />
+
+    <TextView
+        android:id="@+id/txvFechaNacimientoEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:text="Fecha nacimiento"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtFechaNacimientoEmpleado"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaNacimientoEmpleado"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtFechaNacimientoEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="22dp"
+        android:layout_marginBottom="30dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaInicioEmpleo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvFechaNacimientoEmpleado" />
+
+    <TextView
+        android:id="@+id/txvFechaInicioEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="19dp"
+        android:text="Fecha de registro"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtFechaInicioEmpleo"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaInicioEmpleo"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/txtFechaInicioEmpleo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="21dp"
+        android:layout_marginBottom="26dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text=""
+        app:layout_constraintBottom_toTopOf="@+id/txtCorreoEmpleado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvFechaInicioEmpleado" />
+
+    <TextView
+        android:id="@+id/txvCorreoEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginTop="39dp"
+        android:text="Correo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvFechaInicioEmpleado" />
+
+    <EditText
+        android:id="@+id/txtCorreoEmpleado"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="140dp"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/txtFechaInicioEmpleo" />
+
+    <EditText
+        android:id="@+id/txtContrasenia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="3dp"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/txtCorreoEmpleado"
+        app:layout_constraintTop_toBottomOf="@+id/txtCorreoEmpleado" />
+
+    <TextView
+        android:id="@+id/txvContrasenia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="37dp"
+        android:text="Contraseña"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtContrasenia"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

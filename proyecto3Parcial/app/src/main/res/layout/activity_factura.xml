@@ -1,0 +1,246 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".FacturaActivity">
+
+    <Button
+        android:id="@+id/btnEliminarFactura"
+        android:layout_width="108dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="62dp"
+        android:text="Eliminar "
+        app:layout_constraintEnd_toStartOf="@+id/btnActualizarFactura"
+        app:layout_constraintStart_toEndOf="@+id/btnGuardarFactura"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btnGuardarFactura"
+        android:layout_width="105dp"
+        android:layout_height="48dp"
+        android:text="Guardar"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnEliminarFactura"
+        app:layout_constraintEnd_toStartOf="@+id/btnEliminarFactura"
+        app:layout_constraintHorizontal_chainStyle="packed"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnBuscarFactura"
+        android:layout_width="87dp"
+        android:layout_height="48dp"
+        android:layout_marginTop="62dp"
+        android:layout_marginEnd="9dp"
+        android:layout_marginBottom="421dp"
+        android:text="Buscar"
+        app:layout_constraintBottom_toTopOf="@+id/spCodigoCitaFactura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnActualizarFactura"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="TouchTargetSizeCheck" />
+
+    <Button
+        android:id="@+id/btnActualizarFactura"
+        android:layout_width="124dp"
+        android:layout_height="48dp"
+        android:text="Actualizar"
+        app:layout_constraintEnd_toStartOf="@+id/btnBuscarFactura"
+        app:layout_constraintStart_toEndOf="@+id/btnEliminarFactura"
+        app:layout_constraintTop_toTopOf="@+id/btnEliminarFactura" />
+
+    <TextView
+        android:id="@+id/txvEmpleadoFacturador"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="37dp"
+        android:text="Empleado Facturador"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvCodigoFactura" />
+
+    <TextView
+        android:id="@+id/txvFechaRealizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="2dp"
+        android:text="Fecha Realizacion"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtFechaRealizacion"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaRealizacion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvFechaVencimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="38dp"
+        android:layout_marginEnd="1dp"
+        android:text="Fecha Vencimiento"
+        app:layout_constraintEnd_toStartOf="@+id/txtFechaVencimiento"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txvFechaRealizacion" />
+
+    <TextView
+        android:id="@+id/txvHoraRealizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="9dp"
+        android:text="Hora Realizacion"
+        app:layout_constraintBottom_toBottomOf="@+id/txtHoraRealizacion"
+        app:layout_constraintEnd_toStartOf="@+id/txtHoraRealizacion"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvCAI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginBottom="52dp"
+        android:text="CAI"
+        app:layout_constraintBottom_toTopOf="@+id/txvCodigoCitaFactura"
+        app:layout_constraintEnd_toStartOf="@+id/txtCAI"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvCodigoCitaFactura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginEnd="70dp"
+        android:layout_marginBottom="52dp"
+        android:text="Codigo Cita"
+        app:layout_constraintBottom_toTopOf="@+id/txvPrecioTotalFactura"
+        app:layout_constraintEnd_toStartOf="@+id/spCodigoCitaFactura"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvPrecioTotalFactura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:text="Precio Total"
+        app:layout_constraintBaseline_toBaselineOf="@+id/txtPrecioTotalFactura"
+        app:layout_constraintEnd_toStartOf="@+id/txtPrecioTotalFactura"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/txvCodigoFactura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="169dp"
+        android:text="Codigo Factura"
+        app:layout_constraintEnd_toStartOf="@+id/txtCodigoFactura"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/txtCodigoFactura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Codigo Factura"
+        app:layout_constraintBottom_toTopOf="@+id/spEmpleadoFacturador"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvCodigoFactura"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizarFactura" />
+
+    <EditText
+        android:id="@+id/txtFechaRealizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="12dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Fecha Realizacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvFechaRealizacion"
+        app:layout_constraintTop_toBottomOf="@+id/txvEmpleadoFacturador" />
+
+    <EditText
+        android:id="@+id/txtFechaVencimiento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="7dp"
+        android:layout_marginEnd="13dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Fecha Vencimiento"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvFechaVencimiento"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaRealizacion" />
+
+    <EditText
+        android:id="@+id/txtHoraRealizacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="19dp"
+        android:layout_marginEnd="14dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Hora Realizacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvHoraRealizacion"
+        app:layout_constraintTop_toBottomOf="@+id/txtFechaVencimiento" />
+
+    <EditText
+        android:id="@+id/txtCAI"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="18dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="CAI"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvCAI"
+        app:layout_constraintTop_toBottomOf="@+id/txtHoraRealizacion" />
+
+    <EditText
+        android:id="@+id/txtPrecioTotalFactura"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="18dp"
+        android:layout_marginBottom="89dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:minHeight="48dp"
+        android:text="Precio Total"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvPrecioTotalFactura"
+        app:layout_constraintTop_toBottomOf="@+id/spCodigoCitaFactura" />
+
+    <Spinner
+        android:id="@+id/spCodigoCitaFactura"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="56dp"
+        android:layout_marginBottom="29dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtPrecioTotalFactura"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvCodigoCitaFactura"
+        app:layout_constraintTop_toBottomOf="@+id/btnBuscarFactura"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
+
+    <Spinner
+        android:id="@+id/spEmpleadoFacturador"
+        android:layout_width="218dp"
+        android:layout_height="48dp"
+        app:layout_constraintBottom_toTopOf="@+id/txtFechaRealizacion"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/txvEmpleadoFacturador"
+        app:layout_constraintTop_toBottomOf="@+id/btnActualizarFactura"
+        app:layout_constraintVertical_bias="0.836"
+        tools:ignore="SpeakableTextPresentCheck" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
